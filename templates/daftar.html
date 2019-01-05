@@ -1,0 +1,15 @@
+{% extends "basic.html" %}
+{% block content %}
+<center>
+<h2>Register</h2>
+<form action="/daftar/" method="POST">
+	<input type="text" name="nama" placeholder="nama">
+	<input type="username" name="username" placeholder="Username">
+	<input type="email" name="email" placeholder="email">
+	<input type="password" name="password" placeholder="Password">
+  <br>
+  <br>
+  <input type="submit" value="Daftar!">
+</form>
+</center>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "basic.html" %}
+{% block content %}
+
+<center>
+	<br>
+	<form action="/tambahbarang/" method="POST">
+		<input type="Text" name="namabrg" placeholder="Nama Barang">
+		<input type="Text" name="jumlahbrg" placeholder="Jumlah Barang">
+		<input type="Text" name="hargabrg" placeholder="Harga Barang">
+		<br>
+		<br>
+		<input type="Submit" name="Submit" value="Tambahkan!">
+	</form>
+
+</center>
+
+{% endblock %}

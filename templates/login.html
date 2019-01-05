@@ -1,0 +1,18 @@
+{% extends "basic.html" %}
+{% block content %}
+
+<center>
+<h2>Login Form!</h2>
+{% if pesan %}
+	<p>{{pesan}}</p>
+{% endif %}
+<form action="/login" method="POST">
+	<input type="username" name="username" placeholder="username">
+	<input type="password" name="password" placeholder="password">
+	<br>
+	<br>
+	<input type="submit" value="Login!">
+
+</form>
+</center>
+{% endblock %}

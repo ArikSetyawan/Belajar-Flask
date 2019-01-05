@@ -1,0 +1,44 @@
+{% extends "basic.html" %}
+{% block content %}
+{% if session['logged_in'] %}
+
+<a href="/log"> Log User</a>
+<center>
+	<h2>Wellcome {{nama_user}}</h2>
+	<br>
+	<form method="POST" action="/tambahbarang/">
+		<input type="text" name="pesan" placeholder="pesan"></input>
+		<input type="hidden" name="usrnama" value="{{nama_user}}"></input>
+		<input type="submit" value="Submit!"></input>
+	</form>
+	<br>
+	<table class="table" border="1">
+		<thead>
+			<tr>
+				<th width="50">No.</th>
+				<th width="160">Ditulis Oleh:</th>
+				<th width="250">Pada :</th>
+				<th width="160">Pesan</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in pesan %}
+			<tr>
+				<td><center>{{row.0}}</center></td>
+				<td>{{row.1}}</td>
+				<td>{{row.3}}</td>
+				<td>{{row.2}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</center>
+
+{% else %}
+<p>Not login!</p>
+<a href="/login">Login</a> 
+<a href="/register">Register</a>
+<a href="/log"> Log User</a>
+
+{% endif %}
+{% endblock %}

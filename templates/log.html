@@ -1,0 +1,33 @@
+{% extends "basic.html" %}
+{% block content %}
+<br>
+<center><h2>List Aktifitas</h2>
+
+<table class="table" border="1">
+	<thead>
+		<tr>
+			<th width="50">No.</th>
+			<th width="160">User</th>
+			<th width="250">Time</th>
+			<th width="160"> Activity </th>
+			<th width="160"> IP Address </th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for row in datalog %}
+		<tr>
+		
+			<td><center>{{row.0}}</center></td>
+			<td><center>{{row.1}}</center></td>
+			<td>{{row.2}}</td>
+			<td><center>{{row.3}}</center></td>
+			<td>{{row.4}}</td>
+		
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+</center>
+
+
+{% endblock %}

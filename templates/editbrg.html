@@ -1,0 +1,17 @@
+{% extends "basic.html" %}
+{% block content %}
+
+<center>
+	{% for results in datas %}
+	<form action="/editbarang/" method="POST">
+		<input type="hidden" name="id" value="{{row.0}}">
+		<input type="text" name="namabrg" value="{{row.1}}">
+		<input type="text" name="jumlahbrg" value="{{row.2}}">
+		<input type="text" name="hargabrg" value="{{row.3}}">
+		<br>
+		<input type="submit" name="edit" value="Edit!">
+	</form>
+	{% endfor %}
+</center>
+{{pesan}}, {{typed}}
+{% endblock %}
