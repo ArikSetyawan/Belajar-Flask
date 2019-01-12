@@ -1,0 +1,30 @@
+{% extends "basic.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='logreg.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<center>
+	<h2>LOGIN</h2>
+	{% if pesan %}
+	<p>{{pesan}}</p>
+	{% endif %}
+</center>
+<div class="formlog">
+	<form action="/login" method="POST">
+		<div>
+			<input type="text" name="username" placeholder="username">
+		</div>
+		<div>
+			<input type="password" name="password" placeholder="password">
+		</div>
+		<div>
+			<a href="/daftar">Not Yet Member?</a>
+		<br>
+			<input type="submit" value="Login!" class="button">
+		</div>
+	</form>
+</div>
+{% endblock %}

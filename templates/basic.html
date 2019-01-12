@@ -1,6 +1,8 @@
 <html>
 <head>
+	{% block head %}
 	<title>Flask CRUD @SetyawanGroup</title>
+	{% endblock %}
 </head>
 <body>
 	<div><a href="/">Dashbord</a> {% if session['logged_in'] %} <a href="/logout">Logout</a>{% endif %}</div>

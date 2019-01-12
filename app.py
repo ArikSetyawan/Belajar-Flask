@@ -21,6 +21,7 @@ def home():
 	else:
 		cursor.execute("SELECT * FROM pesan")
 		data = cursor.fetchall()
+		print data[0]
 		sesi_user = escape(session['username']).capitalize()
 		cursor.execute("INSERT INTO loguser (namauser,waktu,ipaddress,activity) VALUES(%s,%s,%s,%s)",(sesi_user,waktu,ipaddress,act))
 		db.commit()
@@ -113,6 +114,14 @@ def log():
 		cursor.execute("SELECT * FROM loguser order by id desc")
 		datalog = cursor.fetchall()
 		return render_template("log.html", datalog = datalog)
+
+@app.route('/loginv2')
+def loginv2():
+	return render_template('loginv2.html')
+
+@app.route('/daftarv2')
+def daftarv2():
+	return render_template('daftarv2.html')
 """
 @app.route('/editbarang/', methods=["GET","POST"])
 def editbarang():

@@ -1,8 +1,10 @@
 {% extends "basic.html" %}
 {% block content %}
 {% if session['logged_in'] %}
-
-<a href="/log"> Log User</a>
+<ul>
+	<li>Login as {{nama_user}}</li>
+	<li><a href="/log"> Log User</a></li>
+</ul>
 <center>
 	<h2>Wellcome {{nama_user}}</h2>
 	<br>

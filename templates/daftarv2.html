@@ -1,0 +1,33 @@
+{% extends "basic.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='logreg.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<center>
+	<h2>REGISTER</h2>
+</center>
+<div class="formlog">
+	<form action="/daftar/" method="POST">
+		<div>
+			<input type="text" name="nama" placeholder="nama">
+		</div>
+		<div>
+			<input type="text" name="username" placeholder="username">
+		</div>
+		<div>
+			<input type="email" name="email" placeholder="email">
+		</div>
+		<div>
+			<input type="password" name="password" placeholder="password">
+		</div>
+		<div>
+			<a href="/login">Already Have Account?</a>
+		<br>
+			<input type="submit" value="Daftar!" class="button">
+		</div>
+	</form>
+</div>
+{% endblock %}

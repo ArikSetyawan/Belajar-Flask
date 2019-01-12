@@ -1,0 +1,41 @@
+body{
+	font-family: Arial;
+
+}
+
+h2{
+	color: #000;
+}
+
+.formlog{
+	padding: 1em;
+	margin: 2em auto;
+	width: 17em;
+	border-radius: 3px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea{
+	padding: 10px;
+	width: 95%;
+	background: #d3d3d3;
+	color: #000;
+	border: 0;
+	font-size: 10pt;
+	margin: 6px 0px;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+.button{
+	background: #796bf8;
+	padding: 10px;
+	color: #fff;
+	border: 8px;
+	width: 100%;
+	margin: 20px 0px;
+}
