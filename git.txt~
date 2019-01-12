@@ -1,0 +1,7 @@
+git config --global user.name "ArikSetyawan"
+git config --global user.email "setyawanarik@gmail.com"
+git init
+git add *
+git commit -m "flask"
+git remote add origin https://github.com/ArikSetyawan/Flask.git
+git push origin master
